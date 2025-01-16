@@ -49,6 +49,22 @@ end
 local nauvis = data.raw["planet"]["nauvis"]
 local planet_lib = require("__PlanetsLib__.lib.planet")
 
+local start_astroid_spawn_rate =
+{
+  probability_on_range_chunk =
+  {
+    {position = 0.1, probability = asteroid_util.nauvis_chunks, angle_when_stopped = asteroid_util.chunk_angle},
+    {position = 0.9, probability = asteroid_util.fulgora_chunks, angle_when_stopped = asteroid_util.chunk_angle}
+  },
+  type_ratios =
+  {
+    {position = 0.1, ratios = asteroid_util.nauvis_ratio},
+    {position = 0.9, ratios = asteroid_util.fulgora_ratio},
+  }
+}
+local start_astroid_spawn = asteroid_util.spawn_definitions(start_astroid_spawn_rate, 0.1)
+
+
 local quadromire= 
 {
     type = "planet",
@@ -66,7 +82,9 @@ local quadromire=
         ["magnetic-field"] = nauvis.surface_properties["magnetic-field"],
         ["day-night-cycle"] = nauvis.surface_properties["day-night-cycle"],
     },
-    map_gen_settings = MapGen_Quadromire()
+    map_gen_settings = MapGen_Quadromire(),
+    asteroid_spawn_influence = 1,
+    asteroid_spawn_definitions = start_astroid_spawn
 }
 
 quadromire.orbit = {
