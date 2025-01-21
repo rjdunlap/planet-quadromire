@@ -84,7 +84,8 @@ local quadromire=
     },
     map_gen_settings = MapGen_Quadromire(),
     asteroid_spawn_influence = 1,
-    asteroid_spawn_definitions = start_astroid_spawn
+    asteroid_spawn_definitions = start_astroid_spawn,
+    pollutant_type = "pollution"
 }
 
 quadromire.orbit = {
