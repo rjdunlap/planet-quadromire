@@ -108,6 +108,8 @@ local quadromire_connection = {
   }
 
 PlanetsLib:extend({quadromire})
+PlanetsLib.borrow_music(data.raw["planet"]["nauvis"], quadromire)
+
 
 data:extend{quadromire_connection}
 

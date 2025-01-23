@@ -1,1 +1,2 @@
-APS.set_fixed_choice("quadromire")
+APS.add_choice("quadromire")
+APS.set_default_choice("quadromire")
