@@ -11,7 +11,7 @@ function MapGen_Quadromire()
 
     map_gen_setting.autoplace_controls = {
         
-        ["enemy-base"] = { frequency = 1, size = 1, richness = 1},
+        ["gleba_enemy_base"] = { frequency = 1, size = 1, richness = 1},
         ["stone"] = { frequency = 2, size = 2, richness = 2},
         ["iron-ore"] = { frequency = 2, size = 0.5, richness = 2},
         ["coal"] = { frequency = 2, size = 0.5, richness = 2},
@@ -20,6 +20,7 @@ function MapGen_Quadromire()
         ["trees"] = { frequency = 1, size = 1, richness = 1 },
         ["rocks"] = { frequency = 1, size = 1, richness = 1},
         ["water"] = { frequency = 1, size = 1, richness = 1 },
+        ["uranium-ore"] = { frequency = 1, size = 1, richness = 1 },
     }
 
     map_gen_setting.autoplace_settings["entity"] =  { 
@@ -30,6 +31,7 @@ function MapGen_Quadromire()
         ["stone"] = {},
         ["coal"] = {},
         ["crude-oil"] = {},
+        ["uranium-ore"] = {},
         ["big-sand-rock"] = {},
         ["huge-rock"] = {},
         ["big-rock"] = {},
@@ -93,8 +95,8 @@ quadromire.orbit = {
         type = "space-location",
         name = "star",
     },
-    distance = 1,
-    orientation = 0.69
+    distance = 21,
+    orientation = 0.56
 }
 
 local quadromire_connection = {
