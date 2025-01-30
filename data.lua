@@ -78,6 +78,7 @@ local quadromire=
     starmap_icon = "__planet-quadromire__/graphics/planet-quadromire.png",
     starmap_icon_size = 512,
     magnitude = nauvis.magnitude,
+    subgroup = "planets",
     surface_properties = {
         ["solar-power"] = 100,
         ["pressure"] = nauvis.surface_properties["pressure"],
