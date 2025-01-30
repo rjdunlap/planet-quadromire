@@ -83,6 +83,7 @@ local quadromire=
         ["pressure"] = nauvis.surface_properties["pressure"],
         ["magnetic-field"] = nauvis.surface_properties["magnetic-field"],
         ["day-night-cycle"] = nauvis.surface_properties["day-night-cycle"],
+        ["gravity"] = 10,
     },
     map_gen_settings = MapGen_Quadromire(),
     asteroid_spawn_influence = 1,
@@ -118,8 +119,8 @@ data:extend{quadromire_connection}
 data:extend {{
     type = "technology",
     name = "planet-discovery-quadromire",
-    icons = util.technology_icon_constant_planet("__planet-quadromire__/graphics/planet-quadromire.png"),
-    icon_size = 256,
+    icons = PlanetsLib.technology_icon_constant_planet("__planet-quadromire__/graphics/planet-quadromire.png", 512),
+    icon_size = 512,
     essential = true,
     localised_description = {"space-location-description.quadromire"},
     effects = {
